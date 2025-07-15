@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectoo - Inovação e Utilidade para o Futuro Digital</title>
+    <meta name="description" content="Vectoo é uma empresa de tecnologia brasileira que desenvolve SaaS, Micro-SaaS e jogos para todos os públicos. Focamos em inovação e utilidade.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>Vectoo</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#services" class="nav-link">Serviços</a></li>
+                    <li><a href="#values" class="nav-link">Valores</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Vectoo:</span> Inovação e Utilidade para o Futuro Digital
+                </h1>
+                <p class="hero-subtitle">
+                    Desenvolvemos SaaS, Micro-SaaS e jogos que transformam a experiência digital de todos os públicos.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('services')">
+                        <i class="fas fa-rocket"></i>
+                        Descubra Nossas Soluções
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                        <i class="fas fa-envelope"></i>
+                        Assine Nossa Newsletter
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-element element-1">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="floating-element element-2">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="floating-element element-3">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="floating-element element-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quem Somos: A Essência da Vectoo</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        Somos uma empresa de tecnologia brasileira, moderna e focada em inovação. Nossa paixão é criar soluções que realmente importam, sempre atentas às necessidades dos usuários.
+                    </p>
+                    <p class="about-description">
+                        Acreditamos que a tecnologia deve ser útil, intuitiva e divertida. Cada projeto que desenvolvemos carrega nossa essência: a busca constante pela excelência e pela transformação digital.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">Projetos Entregues</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Clientes Satisfeitos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>Database</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O Que Fazemos: Soluções que Impulsionam o Seu Mundo</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="service-title">SaaS</h3>
+                    <p class="service-description">
+                        Plataformas robustas e escaláveis para otimizar seus negócios. Desenvolvemos soluções completas que crescem junto com sua empresa.
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Escalável</span>
+                        <span class="feature-tag">Seguro</span>
+                        <span class="feature-tag">Intuitivo</span>
+                    </div>
+                    <button class="service-btn">
+                        <span>Saiba Mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="service-title">Micro-SaaS</h3>
+                    <p class="service-description">
+                        Ferramentas especializadas e eficientes para desafios específicos. Soluções focadas que resolvem problemas pontuais com precisão.
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Especializado</span>
+                        <span class="feature-tag">Eficiente</span>
+                        <span class="feature-tag">Rápido</span>
+                    </div>
+                    <button class="service-btn">
+                        <span>Saiba Mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="service-title">Jogos</h3>
+                    <p class="service-description">
+                        Experiências imersivas e divertidas para todas as idades. Combinamos criatividade e tecnologia de ponta para criar jogos únicos.
+                    </p>
+                    <div class="service-features">
+                        <span class="feature-tag">Imersivo</span>
+                        <span class="feature-tag">Criativo</span>
+                        <span class="feature-tag">Divertido</span>
+                    </div>
+                    <button class="service-btn">
+                        <span>Saiba Mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="values">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Pilares: Inovação, Utilidade e Experiência do Usuário</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="values-content">
+                <div class="values-text">
+                    <p class="values-description">
+                        Na Vectoo, seriedade e profissionalismo caminham lado a lado com a criatividade e a paixão por tecnologia. Brincamos com a inovação para construir soluções que geram valor real, sempre com foco na experiência do usuário e na utilidade de cada produto.
+                    </p>
+                    <p class="values-description">
+                        Somos incansáveis na busca por novas formas de transformar o digital. Cada linha de código, cada pixel, cada interação é pensada para criar experiências memoráveis e funcionais.
+                    </p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 class="value-title">Inovação</h4>
+                        <p class="value-description">Sempre à frente, explorando novas tecnologias e metodologias.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <h4 class="value-title">Utilidade</h4>
+                        <p class="value-description">Cada solução deve resolver problemas reais e gerar valor.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="value-title">Experiência</h4>
+                        <p class="value-description">O usuário está no centro de tudo que criamos.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4 class="value-title">Agilidade</h4>
+                        <p class="value-description">Entregamos soluções rápidas sem comprometer a qualidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pronto para Transformar Sua Ideia em Realidade?</h2>
+                <p class="section-subtitle">Entre em contato conosco e descubra como a Vectoo pode impulsionar seu projeto.</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>E-mail</h4>
+                            <p>contato@vectoo.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefone</h4>
+                            <p>+55 (11) 9999-9999</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Localização</h4>
+                            <p>São Paulo, Brasil</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h4>Siga-nos</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Vectoo</h3>
+                    <p>Inovação e Utilidade para o Futuro Digital</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#about">Sobre Nós</a></li>
+                            <li><a href="#services">Serviços</a></li>
+                            <li><a href="#values">Valores</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><a href="#">SaaS</a></li>
+                            <li><a href="#">Micro-SaaS</a></li>
+                            <li><a href="#">Jogos</a></li>
+                            <li><a href="#">Consultoria</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#">Documentação</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Suporte Técnico</a></li>
+                            <li><a href="#">Status</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vectoo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

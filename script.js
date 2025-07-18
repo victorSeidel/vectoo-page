@@ -137,57 +137,49 @@ if (aboutSection) {
     counterObserver.observe(aboutSection);
 }
 
-// Contact form handling
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+if (contactForm) 
+{
+    contactForm.addEventListener('submit', (e) => 
+    {
         e.preventDefault();
         
-        // Get form data
         const formData = new FormData(contactForm);
         const name = formData.get('name');
         const email = formData.get('email');
         const message = formData.get('message');
         
-        // Basic validation
-        if (!name || !email || !message) {
-            showNotification('Por favor, preencha todos os campos.', 'error');
-            return;
-        }
+        if (!name || !email || !message) { showNotification('Por favor, preencha todos os campos.', 'error'); return; }
         
-        if (!isValidEmail(email)) {
-            showNotification('Por favor, insira um e-mail válido.', 'error');
-            return;
-        }
+        if (!isValidEmail(email)) { showNotification('Por favor, insira um e-mail válido.', 'error'); return; }
         
-        // Simulate form submission
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalText = submitButton.innerHTML;
         
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
         submitButton.disabled = true;
-        
-        setTimeout(() => {
+
+        emailjs.send("service_5w9ufpp", "template_wkmwv8x", { name: name, email: email, message: message })
+        .then(() => 
+        {
             showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
             contactForm.reset();
             submitButton.innerHTML = originalText;
             submitButton.disabled = false;
-        }, 2000);
+        })
+        .catch((error) => 
+        {
+            showNotification('Erro ao envial e-mail. Tente novamente.', 'error');
+        });
     });
 }
 
-// Email validation function
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
+function isValidEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email); }
 
-// Notification system
-function showNotification(message, type = 'info') {
-    // Remove existing notifications
+function showNotification(message, type = 'info') 
+{
     const existingNotifications = document.querySelectorAll('.notification');
     existingNotifications.forEach(notification => notification.remove());
     
-    // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.innerHTML = `
@@ -200,7 +192,6 @@ function showNotification(message, type = 'info') {
         </div>
     `;
     
-    // Add styles
     notification.style.cssText = `
         position: fixed;
         top: 100px;
@@ -231,36 +222,25 @@ function showNotification(message, type = 'info') {
         padding: 0.2rem;
     `;
     
-    // Add to DOM
     document.body.appendChild(notification);
     
-    // Animate in
-    setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
+    setTimeout(() => { notification.style.transform = 'translateX(0)'; }, 100);
     
-    // Close button functionality
-    notification.querySelector('.notification-close').addEventListener('click', () => {
-        closeNotification(notification);
-    });
+    notification.querySelector('.notification-close').addEventListener('click', () => { closeNotification(notification); });
     
-    // Auto close after 5 seconds
-    setTimeout(() => {
-        closeNotification(notification);
-    }, 5000);
+    setTimeout(() => { closeNotification(notification); }, 5000);
 }
 
-function closeNotification(notification) {
+function closeNotification(notification) 
+{
     notification.style.transform = 'translateX(400px)';
-    setTimeout(() => {
-        if (notification.parentNode) {
-            notification.parentNode.removeChild(notification);
-        }
-    }, 300);
+    setTimeout(() => { if (notification.parentNode) { notification.parentNode.removeChild(notification); } }, 300);
 }
 
-function getNotificationIcon(type) {
-    switch (type) {
+function getNotificationIcon(type) 
+{
+    switch (type) 
+    {
         case 'success': return 'fa-check-circle';
         case 'error': return 'fa-exclamation-circle';
         case 'warning': return 'fa-exclamation-triangle';
@@ -268,8 +248,10 @@ function getNotificationIcon(type) {
     }
 }
 
-function getNotificationColor(type) {
-    switch (type) {
+function getNotificationColor(type) 
+{
+    switch (type) 
+    {
         case 'success': return '#10B981';
         case 'error': return '#EF4444';
         case 'warning': return '#F59E0B';
@@ -277,7 +259,6 @@ function getNotificationColor(type) {
     }
 }
 
-// Parallax effect for hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroBackground = document.querySelector('.hero-background');
@@ -293,7 +274,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Service card hover effects
 document.addEventListener('DOMContentLoaded', () => {
     const serviceCards = document.querySelectorAll('.service-card');
     
@@ -308,7 +288,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Tech items hover animation
 document.addEventListener('DOMContentLoaded', () => {
     const techItems = document.querySelectorAll('.tech-item');
     
@@ -324,25 +303,6 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.style.transform = 'scale(1) rotate(0deg)';
         });
     });
-});
-
-// Newsletter subscription (for the secondary button in hero)
-document.addEventListener('DOMContentLoaded', () => {
-    const newsletterBtn = document.querySelector('.btn-secondary');
-    
-    if (newsletterBtn) {
-        newsletterBtn.addEventListener('click', () => {
-            const email = prompt('Digite seu e-mail para receber nossa newsletter:');
-            
-            if (email) {
-                if (isValidEmail(email)) {
-                    showNotification('Obrigado! Você foi inscrito em nossa newsletter.', 'success');
-                } else {
-                    showNotification('Por favor, insira um e-mail válido.', 'error');
-                }
-            }
-        });
-    }
 });
 
 // Keyboard navigation
